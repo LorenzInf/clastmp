@@ -14,6 +14,8 @@ public class YearOverviewPanel {
     private JPanel panel;
     private JPanel innerPanel;
 
+
+
     public YearOverviewPanel(String year, List<Tuple<String, List<String>>> data) {
         yearLabel.setText(year);
         yearLabel.setFont(new Font("Jokerman", Font.PLAIN, 40));

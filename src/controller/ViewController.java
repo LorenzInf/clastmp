@@ -1,5 +1,6 @@
 package controller;
 
+import com.formdev.flatlaf.FlatDarkLaf;
 import com.formdev.flatlaf.FlatLightLaf;
 import view.*;
 
@@ -16,6 +17,7 @@ public class ViewController {
     private LoginPanel login;
     private SignUpPanel signUp;
     private MainMenuPanel mainMenu;
+    private TopicDetailsPanel topicDetails;
 
     private YearOverviewPanel[] years;
 
@@ -28,6 +30,8 @@ public class ViewController {
         this.login = new LoginPanel(this, pc);
         this.signUp = new SignUpPanel(this, pc);
         this.mainMenu = new MainMenuPanel(this, pc);
+        this.topicDetails = new TopicDetailsPanel("Among us");
+
 
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.setContentPane(loading.getPane());
@@ -63,8 +67,12 @@ public class ViewController {
     }
 
     public void setMainMenu() {
-        mainMenu.setPanel(pc.getYears());
-        frame.setContentPane(mainMenu.getPanel());
+        //mainMenu.setPanel(pc.getYears());
+        frame.setContentPane(topicDetails.getPanel());
         frame.setVisible(true);
+    }
+
+    public JFrame getFrame() {
+        return frame;
     }
 }

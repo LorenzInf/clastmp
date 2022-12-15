@@ -27,7 +27,7 @@ public class MainMenuPanel {
     }
 
     public JPanel getPanel() {
-        loggedInAsLabel.setText("  Logged in as " + pc.getSchueler().getFirstName() + " " + pc.getSchueler().getLastName() + " (" + pc.getSchueler().getSid() + ")");
+        loggedInAsLabel.setText("  Angemeldet als " + pc.getSchueler().getFirstName() + " " + pc.getSchueler().getLastName() + " (" + pc.getSchueler().getSid() + ")");
         return panel1;
     }
 
